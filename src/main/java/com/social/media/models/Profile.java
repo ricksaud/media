@@ -4,7 +4,7 @@ package com.social.media.models;
 import jakarta.persistence.*;
 
 @Entity
-public class SocialProfile {
+public class Profile {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -12,6 +12,6 @@ public class SocialProfile {
 
     @OneToOne(mappedBy = "socialProfile")
     //@JoinColumn(name = "social_user")
-    private SocialUser user;
+    private User user;
 
 }
