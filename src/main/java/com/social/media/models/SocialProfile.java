@@ -2,9 +2,15 @@ package com.social.media.models;
 
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
-public class Profile {
+public class SocialProfile {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -12,6 +18,6 @@ public class Profile {
 
     @OneToOne(mappedBy = "socialProfile")
     //@JoinColumn(name = "social_user")
-    private User user;
+    private SocialUser user;
 
 }
